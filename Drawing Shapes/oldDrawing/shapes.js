@@ -83,3 +83,32 @@ class Triangle {
         c.fill()
     }
 }
+
+class Quadrilateral {
+    constructor ({
+        position = {
+        x1, x2, x3, x4, 
+        y1, y2, y3, y4
+    }, 
+        velocity, 
+        base, 
+        hieght
+    }){
+        this.p = position
+        this.v = velocity
+        this.b = base
+        this.h = hieght
+    }
+
+    drawShape(){
+        c.fillStyle = 'orange'
+        c.beginPath()
+        c.moveTo(this.p.x1, this.p.y1)
+        c.lineTo(this.p.x2, this.p.y2)
+        c.lineTo(this.p.x3, this.p.y3)
+        c.lineTo(this.p.x4, this.p.y4)
+        c.lineTo(this.p.x1, this.p.y1)
+        c.closePath()
+        c.fill()
+    }
+}

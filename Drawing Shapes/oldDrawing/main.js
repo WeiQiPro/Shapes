@@ -68,6 +68,7 @@ const ellipse = new Ellipse ({
 })
 
 function draw() {
+    c.fillStyle = 'white'
     c.fillRect(0,0, width, height)
     rectangle.drawShape()
     circle.drawShape()

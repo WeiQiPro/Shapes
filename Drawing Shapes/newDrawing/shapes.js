@@ -3,11 +3,11 @@ class GridRect {
         position = {
         x, y
     }, 
-    velocity = {
-        x, y
-    }, w, h}){
+     w, 
+     h
+    }){
         this.p = position
-        this.v = velocity
+
         this.w = w
         this.h = h
     }
@@ -23,30 +23,26 @@ class Rectangle {
         position = {
         x, y
     }, 
-    velocity = {
-        x, y
-    }, w, h}){
+     w, 
+     h
+    }){
         this.p = position
-        this.v = velocity
         this.w = w
         this.h = h
     }
 
     drawShape(){
-        c.fillStyle = 'red'
-        c.fillRect(this.p.x, this.p.y, this.w, this.h)
+        c.strokeStyle = 'red'
+        c.strokeRect(this.p.x, this.p.y, this.w, this.h)
     }
 }
 
 class Circle {
     constructor ({
         position,
-        velocity = {
-            x, y
-        }, 
         radius}){
         this.p = position
-        this.v = velocity
+
         this.r = radius
     }
 
@@ -59,8 +55,8 @@ class Circle {
             0,
             Math.PI * 2
         )
-        c.fillStyle = 'blue'
-        c.fill()
+        c.strokeStyle = 'blue'
+        c.stroke()
         c.closePath()
     }
 }
@@ -68,15 +64,11 @@ class Circle {
 class Ellipse {
     constructor ({
         position,
-        velocity = {
-            x, y
-        }, 
         radiusX,
         radiusY,
         rotation
     }){
         this.p = position
-        this.v = velocity
         this.rx = radiusX
         this.ry = radiusY
         this.rr = rotation
@@ -100,15 +92,11 @@ class Ellipse {
 
 class Triangle {
     constructor ({
-        position, 
-        velocity = {
-            x, y
-        }, 
+        position,        
         base, 
         hieght
     }){
         this.p = position
-        this.v = velocity
         this.b = base
         this.h = hieght
     }
@@ -131,14 +119,10 @@ class Quadrilateral {
         x1, x2, x3, x4, 
         y1, y2, y3, y4
         }, 
-        velocity = {
-        x, y
-        },
         base, 
         hieght
     }){
         this.p = position
-        this.v = velocity
         this.b = base
         this.h = hieght
     }

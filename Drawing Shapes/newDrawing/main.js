@@ -29,12 +29,8 @@ map.forEach((row, i) => {
             squareGrid.push(
                 new GridRect ({
                     position: {
-                        x: j * gridCanvas + 1,
-                        y: i * gridCanvas + 1
-                }, 
-                    velocity: {
-                        x: 0,
-                        y: 0
+                        x: j * gridCanvas + 2,
+                        y: i * gridCanvas + 2
                 },
                 w: padSpace,
                 h: padSpace
@@ -80,10 +76,6 @@ function  drawGrid(padSpace, padding) {
                     x: gridCoorX(shape),
                     y: gridCoorY(shape)
                 },
-                velocity: {
-                    x: 0,
-                    y: 0
-                },
                 w: randomValue(100, 0),
                 h: randomValue(100, 0)
             }).drawShape()
@@ -93,10 +85,6 @@ function  drawGrid(padSpace, padding) {
                 position: {
                     x: gridCoorX(shape),
                     y: gridCoorY(shape)
-                },
-                velocity: {
-                    x: 0,
-                    y: 0
                 },
                 radius: randomValue(50, 0)
             }).drawShape()
@@ -111,10 +99,6 @@ function  drawGrid(padSpace, padding) {
                     y2: gridCoorY(shape),
                     y3: gridCoorY(shape)
                 },
-                velocity: {
-                    x: 0,
-                    y: 0
-                }
             }).drawShape()
         } else
         if (shape.name === Ellipse){
@@ -122,10 +106,6 @@ function  drawGrid(padSpace, padding) {
                 position: {
                     x: gridCoorX(shape),
                     y: gridCoorY(shape)
-                },
-                velocity: {
-                    x: 0,
-                    y: 0
                 },
                 radiusX: randomValue(100, 0),
                 radiusY: randomValue(100, 0),
@@ -144,10 +124,6 @@ function  drawGrid(padSpace, padding) {
                     y3: gridCoorY(shape),
                     y4: gridCoorY(shape)
                 },
-                velocity: {
-                    x: 0,
-                    y: 0
-                }
             }).drawShape()
         }
     })
@@ -161,7 +137,7 @@ function drawSquare(){
 
 function draw() {
 
-    c.fillStyle = 'grey'
+    c.fillStyle = 'white'
     c.fillRect(0,0, width, height)
     drawSquare()
     drawGrid(padSpace, padding)
